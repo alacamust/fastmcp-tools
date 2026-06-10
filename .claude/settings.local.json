@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(winget --version 2>$null)",
+      "PowerShell(if \\($LASTEXITCODE -ne 0\\) { \"winget yok\" })",
+      "PowerShell(winget install OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); npm install -g @anthropic-ai/claude-code)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); claude --version)",
+      "Bash(uv venv *)",
+      "Bash(cmd.exe /c \"where uv\")",
+      "Bash(cmd.exe /c \"uv --version\")",
+      "Bash(cmd.exe /c \"pip --version\")",
+      "Bash(cmd.exe /c \"python --version && python -m pip --version\")",
+      "Bash(cmd.exe /c \"dir /s /b C:\\\\Users\\\\MustafaAlaca\\\\AppData\\\\Local\\\\uv 2>nul | head -5\")",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\MustafaAlaca\\\\.local\\\\bin 2>nul\")",
+      "Bash(cmd.exe /c \"C:\\\\Users\\\\MustafaAlaca\\\\.local\\\\bin\\\\uv.exe venv\")",
+      "Bash(cmd.exe /c \"C:\\\\Users\\\\MustafaAlaca\\\\.local\\\\bin\\\\uv.exe pip install -e .\")",
+      "Bash(cmd.exe /c \"setx PATH \\\\\"%PATH%;C:\\\\\\\\Users\\\\\\\\MustafaAlaca\\\\\\\\.local\\\\\\\\bin\\\\\"\")",
+      "Bash(cmd.exe /c \"reg query HKCU\\\\\\\\Environment /v PATH\")",
+      "Bash(cmd.exe /c \"reg query \\\\\"HKLM\\\\\\\\SYSTEM\\\\\\\\CurrentControlSet\\\\\\\\Control\\\\\\\\Session Manager\\\\\\\\Environment\\\\\" /v PATH\")",
+      "Bash(cmd.exe /c \"reg add HKCU\\\\\\\\Environment /v PATH /t REG_SZ /d \\\\\"C:\\\\\\\\Users\\\\\\\\MustafaAlaca\\\\\\\\bin;C:\\\\\\\\Program Files\\\\\\\\Git\\\\\\\\mingw64\\\\\\\\bin;C:\\\\\\\\Program Files\\\\\\\\Git\\\\\\\\usr\\\\\\\\local\\\\\\\\bin;C:\\\\\\\\Program Files\\\\\\\\Git\\\\\\\\usr\\\\\\\\bin;C:\\\\\\\\Users\\\\\\\\MustafaAlaca\\\\\\\\AppData\\\\\\\\Roaming\\\\\\\\npm;C:\\\\\\\\Program Files\\\\\\\\Git\\\\\\\\usr\\\\\\\\bin\\\\\\\\vendor_perl;C:\\\\\\\\Users\\\\\\\\MustafaAlaca\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Programs\\\\\\\\Microsoft VS Code\\\\\\\\bin;C:\\\\\\\\Users\\\\\\\\MustafaAlaca\\\\\\\\.local\\\\\\\\bin\\\\\" /f\")",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
